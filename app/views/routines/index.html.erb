@@ -1,0 +1,7 @@
+<h1>My Routines</h1>
+
+<% @current_user.routines.each do |routine| %>
+    <ul>
+        <li> <%= link_to routine.title, routine %></li>
+    </ul>
+<% end %> 

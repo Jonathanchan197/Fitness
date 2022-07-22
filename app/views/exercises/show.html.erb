@@ -1,0 +1,9 @@
+<h1> <%= @exercise.name %></h1>
+<% if @exercise.youtube.present? %>
+     <%= raw(YouTubeRails.youtube_embed_url("#{@exercise.youtube}")) %>
+<% end %>
+
+<div class="controls">
+    <%= link_to "Edit Exercise", edit_exercise_path(@exercise) %>
+    <%= link_to 'Delete Exercise', @exercise, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>
