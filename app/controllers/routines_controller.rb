@@ -12,6 +12,7 @@ class RoutinesController < ApplicationController
   def create
     routine = Routine.create routine_params
     @current_user.routines << routine
+    
     redirect_to routines_path
   end
 

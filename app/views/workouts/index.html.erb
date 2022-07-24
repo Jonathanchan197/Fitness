@@ -1,0 +1,9 @@
+<h1>My Workouts</h1>
+
+<% @current_user.workouts.each do |workout| %>
+    <ul>
+        <li> <%= workout.sets %></li>
+        <li> <%= workout.reps %></li>
+        <li> <%= workout.user.email %></li>
+    </ul>
+<% end %>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users, :only => [:new, :create] 
   resources :exercises
   resources :routines
+  resources :workouts, :only => [:index, :new, :create, :destroy]
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

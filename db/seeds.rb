@@ -4,7 +4,7 @@ u2 = User.create :email => 'gogo@ga.co', :password => "chicken"
 puts "#{User.count} users"
 
 Routine.destroy_all
-r1 = Routine.create :title => 'Leg Day', :user_id => 16
+r1 = Routine.create :title => 'Leg Day'
 r2 = Routine.create :title => 'Chest Day'
 puts "#{Routine.count} routines"
 
@@ -19,3 +19,12 @@ e2 = Exercise.create :name => 'Sit Up', :image => 'https://media.istockphoto.com
 puts "#{Exercise.count} exercises"
 
 #associations
+puts "Routine and Workouts"
+r1.workouts << w1 << w2
+
+puts "Workout and Exercise"
+w1.exercises << e1
+w1.exercises << e2
+
+puts "User and Routines"
+u1.routines << r1 << r2
