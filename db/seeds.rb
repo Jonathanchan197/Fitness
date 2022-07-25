@@ -9,8 +9,8 @@ r2 = Routine.create :title => 'Chest Day'
 puts "#{Routine.count} routines"
 
 Workout.destroy_all
-w1 = Workout.create :sets => 4, :reps => 10
-w2 = Workout.create :sets => 3, :reps => 12
+w1 = Workout.create :sets => 4, :reps => 10, :name => "Push up"
+w2 = Workout.create :sets => 3, :reps => 12, :name => "Sit up"
 puts "#{Workout.count} workouts"
 
 Exercise.destroy_all
@@ -23,8 +23,11 @@ puts "Routine and Workouts"
 r1.workouts << w1 << w2
 
 puts "Workout and Exercise"
-w1.exercises << e1
-w1.exercises << e2
+e1.workouts << w1
+e2.workouts << w2
 
 puts "User and Routines"
 u1.routines << r1 << r2
+
+puts "User and Workouts"
+u1.workouts << w1

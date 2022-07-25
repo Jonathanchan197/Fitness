@@ -1,7 +1,16 @@
 <h1>My Routines</h1>
 
+<div class="container">
 <% @current_user.routines.each do |routine| %>
-    <ul>
-        <li> <%= link_to routine.title, routine %></li>
-    </ul>
-<% end %> 
+    <div class="card">
+        <h2><%= routine.title %></h2>
+        <%= link_to image_tag("https://placewaifu.com/image/400"), routine %>
+    </div>
+<% end %>
+<br>
+
+<div class="controls">
+<%= link_to "Create Routine", new_routine_path %>
+</div>
+
+</div>

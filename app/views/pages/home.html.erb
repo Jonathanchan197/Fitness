@@ -1,1 +1,10 @@
 <h1>Welcome</h1>
+
+
+<% if @current_user.present? %>
+    <img src="https://static.wikia.nocookie.net/dumbbell-nan-kilo-moteru/images/f/fe/Machio_Naruzo_buff_%28anime%29.png" alt="" class="home">
+    <p>Time to make some gains</p>
+<% else %>
+    <img src="https://static.wikia.nocookie.net/dumbbell-nan-kilo-moteru/images/0/08/Machio_Naruzo_%28anime%29.png" alt="" class="home">
+    <p>Ready to begin?</p>
+<% end %>

@@ -15,14 +15,24 @@ class WorkoutsController < ApplicationController
         redirect_to workouts_path
     end
 
+    def edit
+        @workout = Workout.find params[:id]
+    end
+    
+    def update
+        workout = Workout.find params[:id]
+        workout.update workout_params
+        redirect_to "/routines/#{workout[:routine_id]}" 
+    end
+
     def destroy 
         workout = Workout.find params[:id]
         workout.destroy
-        redirect_to routines_path
+        redirect_to "/routines/#{workout[:routine_id]}" 
       end
 
     private
     def workout_params
-        params.require(:workout).permit(:sets, :reps)
+        params.require(:workout).permit(:sets, :reps, :name, :exercise_id, :routine_id)
     end
 end

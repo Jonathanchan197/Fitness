@@ -2,8 +2,9 @@
 
 <% @current_user.workouts.each do |workout| %>
     <ul>
-        <li> <%= workout.sets %></li>
-        <li> <%= workout.reps %></li>
-        <li> <%= workout.user.email %></li>
+        <li> 
+            <%= link_to "#{workout.name}", "/exercises/#{workout.exercise_id}" %> 
+         </li>
     </ul>
 <% end %>
+

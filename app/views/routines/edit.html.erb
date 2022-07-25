@@ -1,2 +1,12 @@
-<h1>Routine#edit</h1>
-<p>Find me in app/views/routine/edit.html.erb</p>
+<h1> Update Routine </h1>
+
+<%= form_for @routine do |f| %> 
+    <%= @routine.title %>
+
+    <h2>Add Workout</h2>
+        <%= render :partial => 'workout_fields' %>
+    <div class="submit">
+    <%= f.submit "Update Routine" %>
+    <%= link_to "Go back", routine_path %>
+    </div>
+<% end %>

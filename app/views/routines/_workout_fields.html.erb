@@ -1,0 +1,8 @@
+<%= fields_for :workouts do |builder| %>
+   <%= builder.label :sets %>
+    <%= builder.text_field :sets, :required => true %>
+    <%= builder.label :reps %>
+    <%= builder.text_field :reps, :required => true %>
+    <%= builder.label :exercise_id %>
+    <%= builder.select :exercise_id, Exercise.pluck(:name, :id) %>
+<% end %>

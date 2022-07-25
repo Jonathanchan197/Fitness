@@ -2,5 +2,10 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
 
-    <%= f.submit "Gainz" %>
+    <h2>Add Workout</h2>
+        <%= render :partial => 'workout_fields' %>
+    <div class="submit">
+    <%= f.submit "Create Routine" %>
+    <%= link_to "Go back", routine_path %>
+    </div>
 <% end %>
