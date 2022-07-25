@@ -12,6 +12,6 @@
     <% end %>
 
 <div class="controls">
-    <%= link_to "Edit Routine", edit_routine_path(@routine) %>
+    <%= link_to "Add to Routine", edit_routine_path(@routine) %> |
     <%= link_to 'Delete Routine', @routine, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>

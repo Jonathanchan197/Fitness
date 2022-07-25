@@ -2,7 +2,7 @@ class RoutinesController < ApplicationController
   before_action :check_for_login
   
   def index
-    @routines = Routine.all
+    @routines = @current_user.routines
   end
 
   def new
@@ -51,6 +51,6 @@ class RoutinesController < ApplicationController
 
   private
   def routine_params
-    params.require(:routine).permit(:title, workouts_variants_attributes: [:sets, :reps, :exercise_id])
+    params.require(:routine).permit(:title, workouts_attributes: [:sets, :reps, :exercise_id])
   end
 end

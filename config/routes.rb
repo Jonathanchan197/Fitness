@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :exercises
   resources :routines
   resources :workouts
+  resources :public, :only => [:index, :show]
+  resources :muscles
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

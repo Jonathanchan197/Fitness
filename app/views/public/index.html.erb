@@ -1,0 +1,16 @@
+<h1>All routines</h1>
+
+<div class="container">
+<% @routines.each do |routine| %>
+    <div class="card">
+        <h2><%= routine.title %></h2>
+        <%= link_to image_tag("https://placewaifu.com/image/400"), "/public/#{routine[:id]}" %>
+        <% if routine.user.present? %>
+        <p> By: <%= routine.user.email %> </p>
+        <% else %>
+        <p> No Owner </p>
+        <% end%>
+    </div>
+<% end %>
+
+</div>

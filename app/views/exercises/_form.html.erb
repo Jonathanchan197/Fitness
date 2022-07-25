@@ -1,11 +1,16 @@
 <%= form_for @exercise do |f| %> 
+    <div class="form">
     <%= f.label :name %>
     <%= f.text_field :name %>
 
     <%= f.label :youtube %>
     <%= f.text_field :youtube %>
 
-    <div class="submit">
+    <%= fields_for :muscles do |builder| %>
+        <%= builder.label :muscle_id %>:
+        <%= builder.select :muscle_id, Muscle.pluck(:name, :id) %>
+    <% end %>
+
     <%= f.submit "Add Exercise" %>
     </div>
 <% end %>

@@ -2,6 +2,12 @@
 <% if @exercise.youtube.present? %>
      <%= raw(YouTubeRails.youtube_embed_url("#{@exercise.youtube}")) %>
 <% end %>
+<h2>Muscles trained:</h2>
+<% @exercise.muscles.each do |muscle| %>
+    <ul>
+        <p> <%= link_to muscle.name, muscle %> </p>
+    </ul>
+<% end %>
 
 <div class="controls">
     <%= link_to "Edit Exercise", edit_exercise_path(@exercise) %>

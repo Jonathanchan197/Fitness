@@ -1,12 +1,10 @@
 <h1> Update Routine </h1>
-
 <%= form_for @routine do |f| %> 
-    <%= @routine.title %>
-
-    <h2>Add Workout</h2>
+    <%= f.label :title %>:
+    <%= f.text_field :title %>
+    <h3>Add Workout</h3>
         <%= render :partial => 'workout_fields' %>
-    <div class="submit">
-    <%= f.submit "Update Routine" %>
+    <%= f.submit "Add to Routine" %>
+    <br>
     <%= link_to "Go back", routine_path %>
-    </div>
 <% end %>

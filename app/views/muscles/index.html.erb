@@ -1,0 +1,7 @@
+<h1>List of Muscle Groups</h1>
+
+<% @muscles.each do |muscle| %>
+    <p>
+        <%= link_to muscle.name, muscle %>
+    </p>
+<% end%>

@@ -1,14 +1,12 @@
 <%= form_for @workout do |f| %> 
-    <%= f.label :sets %>
+    <%= f.label :sets %>:
     <%= f.number_field :sets %>
 
-    <%= f.label :reps %>
+    <%= f.label :reps %>:
     <%= f.number_field :reps %>
 
-    <%= f.label :exercise_id %>
+    <%= f.label :exercise_id %>:
     <%= f.select :exercise_id, Exercise.pluck(:name, :id) %>
 
-    <div class="submit">
     <%= f.submit "Submit / Go back"%>
-    </div>
 <% end %>

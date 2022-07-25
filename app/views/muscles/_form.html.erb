@@ -1,0 +1,11 @@
+<%= form_for @muscle do |f| %> 
+    <div class="form">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.submit "Update Muscle" %>
+    </div>
+<% end %>
