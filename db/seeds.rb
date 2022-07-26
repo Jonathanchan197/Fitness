@@ -1,6 +1,6 @@
 User.destroy_all
-u1 = User.create :email => 'toto@ga.co', :password => "chicken"
-u2 = User.create :email => 'gogo@ga.co', :password => "chicken"
+u1 = User.create :email => 'toto@ga.co', :password => "chicken", :image => "https://www.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png"
+u2 = User.create :email => 'gogo@ga.co', :password => "chicken", :image => "https://i.pinimg.com/originals/d9/56/9b/d9569bbed4393e2ceb1af7ba64fdf86a.jpg"
 puts "#{User.count} users"
 
 Routine.destroy_all

@@ -1,3 +1,4 @@
+<div class="workoutform">
 <%= form_for @workout do |f| %> 
     <%= f.label :sets %>:
     <%= f.number_field :sets %>
@@ -7,6 +8,6 @@
 
     <%= f.label :exercise_id %>:
     <%= f.select :exercise_id, Exercise.pluck(:name, :id) %>
-
-    <%= f.submit "Submit / Go back"%>
+    <%= f.submit "Submit", :id => "button" %>
 <% end %>
+</div>

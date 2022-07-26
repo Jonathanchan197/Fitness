@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
-a, a:hover, a:focus, a:active {
+a, a:focus, a:active {
       text-decoration: none;
       color: white;
+      margin: 20px;
+}
+
+a:hover {
+    box-shadow: 0 5px 3px 0 rgba(0,0,0,0.2);
+}
+
+nav {
+    padding: 20px;
+    background-color: rgba(0,0,0,0.5);
+    width: 97%;
 }
 
 .home {
@@ -15,25 +26,35 @@ body {
   text-align: center;
   background: #7f7fd5;
   background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+  margin: 0;
+}
+
+h1 {
+    margin-bottom: 50px;
 }
 
 .container {
     width: 960px;
     margin: 0 auto;
-    text-align: center;
+    padding-top: 50px;
 }
 
 .card {
-    width: 250px;
-    height: 420px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 25%;
     display: inline-block;
-    border: 5px solid white;
-    border-radius: 2em;
-    margin: 1em;
+    margin: 30px;
+    border-radius: 1em;
+    margin-top: 0px;
+}
+
+.card:hover {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
 }
 
 img {
-    width: 100%;
+    width: 80%;
     border-radius: 1em;
 }
 
@@ -41,23 +62,101 @@ img {
     line-height: 200px;
 }
 
+.routinecontrols {
+    width: 200px;
+    display: inline-block;
+}
+
+div.routinecontrols a {
+    margin-right: 1em;
+}
+
+.workoutlist {
+    width: 350px;
+    display: inline-block;
+    text-align: left;
+    margin: 5px;
+}
+
+#button {
+    width: 100px;
+}
+
+.publiclist {
+    width: 500px;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+
 /* login box */
 input {
     border-radius: 1em;
     margin: 1em;
     height: 30px;
-    width: 150px;
+    width: 300px;
     text-align: center;
     font-family : inherit;
     font-size: 1em; 
+    box-shadow: 5px 5px;
+}
+
+select {
+    border-radius: 1em;
+    margin: 1em;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    font-family : inherit;
+    font-size: 1em; 
+    box-shadow: 5px 5px;
+    font-family: "Quicksand", sans-serif;
+}
+
+div.submit input {
+    width: 150px;
+    margin-top: 5em;
+}
+
+div.workoutform input {
+    width: 4em;
+    text-align: center;
 }
 
 .form {
     content: "\a";
     white-space: pre;
+    margin-right: 1em;
 }
 
 .muscle {
     height: 200px;
     width: auto;
+}
+
+div.checkbox input {
+    width: 20px;
+    box-shadow: none;
+    vertical-align: middle; 
+    accent-color: #9b59b6;
+}
+
+.checkbox {
+    margin-left: 30px;
+}
+
+.list {
+    margin-right: 3em;
+}
+
+.back {
+    margin-bottom: 5em;
+    margin-top: 2em;
+    font-size: larger;
+}
+
+iframe {
+    border: 0.5em solid rgba(0,0,0,0.5);
+    border-radius: 2em;
+    box-shadow: 5px 8px rgba(255,255,255,0.3);
 }

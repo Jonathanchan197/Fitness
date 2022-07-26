@@ -1,7 +1,13 @@
 <h1>All Exercises</h1>
 
+<div class="list">
 <% @exercises.each do |exercise| %>
     <ul>
         <p> <%= link_to exercise.name, exercise %> </p>
     </ul>
 <% end %>
+</div>
+
+<div class="controls">
+<h4><%= link_to "Add Exercise", new_exercise_path %></h4>
+</div>

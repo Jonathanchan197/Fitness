@@ -1,7 +1,13 @@
 <h1>List of Muscle Groups</h1>
 
+<div class="list">
 <% @muscles.each do |muscle| %>
-    <p>
+    <ul>
         <%= link_to muscle.name, muscle %>
-    </p>
+    </ul>
 <% end%>
+</div>
+
+<div class="controls">
+<h4><%= link_to "Add Muscle", new_muscle_path %></h4>
+</div>

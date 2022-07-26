@@ -2,9 +2,10 @@
 
 <div class="container">
 <% @current_user.routines.each do |routine| %>
-    <div class="card">
+    <div class="card" >
         <h2><%= routine.title %></h2>
-        <%= link_to image_tag("https://placewaifu.com/image/400"), routine %>
+        <%= link_to image_tag(@current_user.image), routine %>
+        <p></p>
     </div>
 <% end %>
 <br>

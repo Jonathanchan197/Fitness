@@ -3,11 +3,13 @@
      <%= image_tag @muscle.image, :class => 'muscle' %>
 <% end %>
 <h2>Exercises that train <%= @muscle.name %>: </h2>
+<div class="list">
 <% @muscle.exercises.each do |exercise| %>
     <ul>
-    <p> <%= link_to exercise.name, exercise %> </p>
+    <p> <strong> <%= link_to exercise.name, exercise %> </strong> </p>
     </ul>
 <% end %>
+</div>
 
 
 <div class="controls">

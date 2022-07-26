@@ -1,16 +1,20 @@
 <%= form_for @exercise do |f| %> 
     <div class="form">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => true %>
 
     <%= f.label :youtube %>
     <%= f.text_field :youtube %>
-
-    <%= fields_for :muscles do |builder| %>
-        <%= builder.label :muscle_id %>:
-        <%= builder.select :muscle_id, Muscle.pluck(:name, :id) %>
-    <% end %>
-
-    <%= f.submit "Add Exercise" %>
     </div>
+    <div class="checkbox">
+        <h4>Muscle Groups Trained:</h4>
+        <% @muscles.each do |muscle| %>
+            <%= check_box_tag("muscle[]", muscle.id, (true if @exercise.muscles.include? muscle)) %>
+            <%= label_tag(muscle.name, muscle.name) %>
+        <% end %>
+    </div>
+    <h4>Cant find the muscle?</h4>
+    <%= link_to "Add New Muscle Here", new_muscle_path %>
+    <br>
+    <%= f.submit "Add Exercise" %>
 <% end %>

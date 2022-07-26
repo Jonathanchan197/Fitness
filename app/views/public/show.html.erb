@@ -1,17 +1,13 @@
-<div class="container">
 <h1><%= @routine.title %></h1>
-    <% if @routine.user.present? %>
+<% if @routine.user.present? %>
         <h4> By: <%= @routine.user.email %> </h4>
-        <% else %>
-        <h4> No Owner </h4>
-        <% end%>
+     <% else %>
+         <h4> No Owner </h4>
+<% end%>
     <% @workouts.each do |workout| %>
-        <ul>
-        <%= workout.sets %> sets of 
-        <%= workout.reps %> reps of
-        <%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %>
-        </ul>
+        <div class="publiclist">
+            <strong> <%= workout.sets %> </strong> sets of 
+            <strong> <%= workout.reps %> </strong> reps of
+            <strong> <%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong>
+        </div>
     <% end %>
-<br>
-<%= link_to "Back to List", public_index_path %>
-</div>

@@ -4,7 +4,7 @@
 <% @routines.each do |routine| %>
     <div class="card">
         <h2><%= routine.title %></h2>
-        <%= link_to image_tag("https://placewaifu.com/image/400"), "/public/#{routine[:id]}" %>
+        <%= link_to image_tag(routine.user.image), "/public/#{routine[:id]}" %>
         <% if routine.user.present? %>
         <p> By: <%= routine.user.email %> </p>
         <% else %>

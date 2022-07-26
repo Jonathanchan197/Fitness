@@ -1,17 +1,20 @@
 <h1><%= @routine.title %></h1>
 
     <% @workouts.each do |workout| %>
-        <ul>
-        <%= workout.sets %> sets of 
-        <%= workout.reps %> reps of
-        <%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %>
-        |
-        <%= link_to "Edit", edit_workout_path(workout) %>
-        <%= link_to "Delete", workout, :method => 'delete', :data => {:confirm => "Delete workout?"} %>
-        </ul>
+        <div class="routinedisplay">
+        <div class="workoutlist">
+            <strong><%= workout.sets %> </strong> sets of 
+            <strong><%= workout.reps %> </strong> reps of
+            <strong><%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong> 
+        </div>
+        <div class="routinecontrols">
+            <%= link_to "Edit", edit_workout_path(workout) %>
+            <%= link_to "Remove", workout, :method => 'delete', :data => {:confirm => "Delete workout?"} %>
+        </div>
+        </div>
     <% end %>
 
 <div class="controls">
-    <%= link_to "Add to Routine", edit_routine_path(@routine) %> |
+    <%= link_to "Add to Routine", edit_routine_path(@routine) %>
     <%= link_to 'Delete Routine', @routine, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>
