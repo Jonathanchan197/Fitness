@@ -4,7 +4,7 @@
 <% @current_user.routines.each do |routine| %>
     <div class="card" >
         <h2><%= routine.title %></h2>
-        <%= link_to image_tag(@current_user.image), routine %>
+        <%= link_to cl_image_tag(@current_user.image), routine %>
         <p></p>
     </div>
 <% end %>

@@ -12,7 +12,7 @@
 
 <div class="form">
 <%= form_for(@user, :html => {:multipart => true}) do |f| %>
-    <%= f.label :image %>
+    <%= f.label :Profile_picture %>
     <%= f.cl_image_upload :image %>
 
     <%= f.submit "Update Details" %>

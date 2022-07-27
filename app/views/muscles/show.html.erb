@@ -1,6 +1,6 @@
 <h1> <%= @muscle.name %></h1>
 <% if @muscle.image.present? %>
-     <%= image_tag @muscle.image, :class => 'muscle' %>
+     <%= cl_image_tag(@muscle.image, :class => "muscle")%>
 <% end %>
 <h2>Exercises that train <%= @muscle.name %>: </h2>
 <div class="list">

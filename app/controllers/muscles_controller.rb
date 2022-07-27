@@ -11,6 +11,12 @@ class MusclesController < ApplicationController
 
   def create
     muscle = Muscle.create muscle_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      muscle.image = req["public_id"]
+    end
+    muscle.update_attributes(muscle_params)
+    muscle.save
     redirect_to muscle 
   end
 
@@ -20,7 +26,12 @@ class MusclesController < ApplicationController
 
   def update
     muscle = Muscle.find params[:id]
-    muscle.update muscle_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      muscle.image = req["public_id"]
+    end
+    muscle.update_attributes(muscle_params)
+    muscle.save
     redirect_to muscle
   end
 
