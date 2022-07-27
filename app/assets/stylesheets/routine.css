@@ -4,16 +4,23 @@ a, a:focus, a:active {
       text-decoration: none;
       color: white;
       margin: 20px;
+      transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      border-radius: 0.5em;
 }
 
 a:hover {
-    box-shadow: 0 5px 3px 0 rgba(0,0,0,0.2);
+    box-shadow: 5px 8px rgba(0,0,0,0.2);
+    border-radius: 0.5em;
 }
 
 nav {
     padding: 20px;
     background-color: rgba(0,0,0,0.5);
     width: 97%;
+}
+
+#user {
+    text-align: right;
 }
 
 .home {
@@ -49,13 +56,21 @@ h1 {
     margin-top: 0px;
 }
 
-.card:hover {
+.card:hover{
     box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2);
 }
 
 img {
     width: 80%;
     border-radius: 1em;
+}
+
+img.home {
+    margin-left: 1.5em;
+}
+
+img:hover {
+    box-shadow: none;
 }
 
 .controls {
@@ -89,7 +104,6 @@ div.routinecontrols a {
     margin: 5px;
 }
 
-/* login box */
 input {
     border-radius: 1em;
     margin: 1em;
@@ -127,6 +141,7 @@ div.workoutform input {
     content: "\a";
     white-space: pre;
     margin-right: 1em;
+    text-align: center;
 }
 
 .muscle {
@@ -155,8 +170,39 @@ div.checkbox input {
     font-size: larger;
 }
 
-iframe {
+iframe, .muscle {
     border: 0.5em solid rgba(0,0,0,0.5);
     border-radius: 2em;
     box-shadow: 5px 8px rgba(255,255,255,0.3);
+}
+
+/* User page */
+div.user_image {
+    width: 100px;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.user_name {
+    width: 350px;
+    height: 100px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 50px;
+}
+
+.user_facts {
+    width: 550px;
+    height: 200px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 300px;
+    margin-top: 50px;
+}
+
+.icon {
+    width: 20px;
+    vertical-align: bottom;
 }

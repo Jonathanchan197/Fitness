@@ -1,0 +1,20 @@
+<h1>Editing: <%= @user.email %></h1>
+
+<% if @user.errors.any? %>
+<div class="form">
+    <ol>
+        <% @user.errors.full_messages.each do |msg| %>
+        <%= msg %>
+        <% end %>
+    </ol>
+</div>
+<% end %>
+
+<div class="form">
+<%= form_for @user do |f| %>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+
+    <%= f.submit "Update Details" %>
+<% end %>
+</div>

@@ -1,0 +1,16 @@
+<h1>All users</h1>
+<h2><%= @users.count %> registered users</h2>
+<div class="list">
+<ul>
+    <% @users.each do |user| %>
+        <p>
+        <% if user.admin? %>
+            <%= image_tag("admin.png", :class => "icon")%>
+        <% else%>
+            <%= image_tag("user.png", :class => "icon")%>
+        <% end%>
+        <%= link_to "#{user.email}", user %> 
+        </p>
+    <% end %>
+</ul>
+</div>
