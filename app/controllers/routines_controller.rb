@@ -13,10 +13,6 @@ class RoutinesController < ApplicationController
   def create
     routine = Routine.create routine_params
     workout = routine.workouts.build
-    workout.sets = params[:workouts][:sets]
-    workout.reps = params[:workouts][:reps]
-    workout.exercise_id = params[:workouts][:exercise_id]
-    workout.save
     @current_user.routines << routine
     redirect_to routines_path
   end

@@ -41,8 +41,12 @@ class MusclesController < ApplicationController
 
   def destroy
     muscle = Muscle.find params[:id]
-    muscle.destroy
-    redirect_to muscles_path
+    if @current_user.admin?
+      muscle.destroy
+      redirect_to muscles_path
+    else 
+      redirect_to muscle
+    end
   end
 
   private

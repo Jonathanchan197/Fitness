@@ -2,7 +2,7 @@
 
 
 <% if @current_user.present? %>
-    <%= link_to image_tag("user_home.png", :class => "home") %>
+    <%= link_to image_tag("user_home.png", :class => "home"), routines_path %>
     <p>Time to make some gains</p>
 <% else %>
     <%= link_to image_tag("home.png", :class => "home"), login_path %>

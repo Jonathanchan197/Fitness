@@ -59,8 +59,12 @@ class ExercisesController < ApplicationController
 
   def destroy
     exercise = Exercise.find params[:id]
-    exercise.destroy
-    redirect_to exercises_path
+    if @current_user.admin?
+      exercise.destroy
+      redirect_to exercises_path
+    else 
+      redirect_to exercise
+    end
   end
 
   private
