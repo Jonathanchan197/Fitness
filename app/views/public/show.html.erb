@@ -4,10 +4,16 @@
      <% else %>
          <h4> No Owner </h4>
 <% end%>
+    <% if @check == [nil] %>
+        <br>
+        <h2>Routine is empty!</h2>
+        <br>
+    <% else %>
     <% @workouts.each do |workout| %>
         <div class="publiclist">
             <strong> <%= workout.sets %> </strong> sets of 
             <strong> <%= workout.reps %> </strong> reps of
             <strong> <%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong>
         </div>
-    <% end %>
+        <% end %>
+     <% end %>
