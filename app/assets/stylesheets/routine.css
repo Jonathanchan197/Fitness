@@ -27,6 +27,14 @@ nav {
     width: 20%;
 }
 
+.error {
+    content: "\a";
+    white-space: pre;
+    margin-right: 4em;
+    text-align: center;
+    height: 150px;
+}
+
 body {
   font-family: "Quicksand", sans-serif;
   color: white;
@@ -200,6 +208,10 @@ div.user_image {
     vertical-align: top;
     margin-left: 300px;
     margin-top: 50px;
+}
+
+div.user_facts h2 {
+    margin-left: 90px;
 }
 
 .icon {

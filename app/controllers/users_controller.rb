@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def edit 
-    if params[:id].to_i == @current_user.id 
+    if params[:id].to_i == @current_user.id || @current_user.admin? 
       @user = User.find params[:id] 
     else 
       redirect_to user_path
@@ -29,14 +29,18 @@ class UsersController < ApplicationController
 
   def update
     user = User.find params[:id]
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      user.image = req["public_id"]
+    end
     user.update user_params
+    user.save
     redirect_to user
   end
 
   def show
     @user = User.find params[:id]
   end
-
   
   private
   def user_params
