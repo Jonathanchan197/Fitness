@@ -1,21 +1,21 @@
 <h1><%= @routine.title %></h1>
-    <% if @routine.nil? %>
-    <% @workouts.each do |workout| %>
-        <div class="routinedisplay">
-        <div class="workoutlist">
-            <strong><%= workout.sets %> </strong> sets of 
-            <strong><%= workout.reps %> </strong> reps of
-            <strong><%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong> 
+    <% if @check == [nil] %>
+        <br>
+        <h2>Routine is empty!</h2>
+    <% else %>
+        <% @workouts.each do |workout| %>
+            <div class="routinedisplay">
+            <div class="workoutlist">
+             <strong><%= workout.sets %> </strong> sets of 
+             <strong><%= workout.reps %> </strong> reps of
+                <strong><%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong> 
         </div>
         <div class="routinecontrols">
             <%= link_to "Edit", edit_workout_path(workout) %>
             <%= link_to "Remove", workout, :method => 'delete', :data => {:confirm => "Delete workout?"} %>
         </div>
         </div>
-    <% end %>
-    <% else %>
-        <br>
-        <h2>Routine is empty!</h2>
+        <% end %>
     <% end%>
 
 <div class="controls">
