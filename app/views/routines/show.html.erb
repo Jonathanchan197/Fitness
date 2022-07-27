@@ -1,5 +1,5 @@
 <h1><%= @routine.title %></h1>
-
+    <% if @routine.nil? %>
     <% @workouts.each do |workout| %>
         <div class="routinedisplay">
         <div class="workoutlist">
@@ -13,6 +13,9 @@
         </div>
         </div>
     <% end %>
+    <% else %>
+        <h2>No workouts found!</h2>
+    <% end%>
 
 <div class="controls">
     <%= link_to "Add to Routine", edit_routine_path(@routine) %>

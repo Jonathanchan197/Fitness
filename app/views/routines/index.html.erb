@@ -1,14 +1,19 @@
 <h1>My Routines</h1>
-
 <div class="container">
 <% @current_user.routines.each do |routine| %>
     <div class="card" >
         <h2><%= routine.title %></h2>
+        <% if @current_user.image.present?%>
         <%= link_to cl_image_tag(@current_user.image), routine %>
+        <% else %>
+        <%= link_to image_tag("default.png"), routine %>
+        <% end %>
         <p></p>
     </div>
 <% end %>
-<br>
+<% if @current_user.routines.empty? %>
+    <h2>No routines!</h2>
+<% end%>
 
 <div class="controls">
 <%= link_to "Create Routine", new_routine_path %>
