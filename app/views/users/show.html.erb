@@ -1,5 +1,9 @@
 <div class="user_image">
-    <%= cl_image_tag(@user.image) %>
+    <% if @user.image.present? %>
+        <%= cl_image_tag(@user.image) %>
+    <% else %>
+        <%= image_tag("default.png")%>
+    <% end %>
 </div>
 
 <div class="user_name">

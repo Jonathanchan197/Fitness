@@ -19,10 +19,6 @@ nav {
     width: 97%;
 }
 
-#user {
-    text-align: right;
-}
-
 .home {
     width: 20%;
 }
@@ -75,10 +71,6 @@ img {
 
 img.home {
     margin-left: 1.5em;
-}
-
-img:hover {
-    box-shadow: none;
 }
 
 .controls {

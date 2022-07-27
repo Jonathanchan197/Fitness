@@ -2,9 +2,9 @@
 
 
 <% if @current_user.present? %>
-    <img src="https://static.wikia.nocookie.net/dumbbell-nan-kilo-moteru/images/f/fe/Machio_Naruzo_buff_%28anime%29.png" alt="" class="home">
+    <%= link_to image_tag("user_home.png", :class => "home") %>
     <p>Time to make some gains</p>
 <% else %>
-    <img src="https://static.wikia.nocookie.net/dumbbell-nan-kilo-moteru/images/0/08/Machio_Naruzo_%28anime%29.png" alt="" class="home">
+    <%= link_to image_tag("home.png", :class => "home"), login_path %>
     <p>Ready to begin?</p>
 <% end %>

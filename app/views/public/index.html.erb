@@ -4,11 +4,11 @@
 <% @routines.each do |routine| %>
     <div class="card">
         <h2><%= routine.title %></h2>
-        <%= link_to cl_image_tag(routine.user.image), "/public/#{routine[:id]}" %>
+            <%= link_to cl_image_tag(routine.user.image), "/public/#{routine[:id]}" %>
         <% if routine.user.present? %>
-        <p> By: <%= routine.user.email %> </p>
+            <p> By: <%= routine.user.email %> </p>
         <% else %>
-        <p> No Owner </p>
+            <p> No Owner </p>
         <% end%>
     </div>
 <% end %>
