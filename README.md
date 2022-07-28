@@ -14,7 +14,7 @@
 - Icon indicator to show User rank
 
 ## Models
-I first planned out the CRUD systems I would use and generated an ERD diagram to see the association models needed
+I first planned out the CRUD systems I would use and generated an ERD diagram to see the different models and associations
 
 ![ERD Diagram](/app/assets/images/ERD.png)
 
