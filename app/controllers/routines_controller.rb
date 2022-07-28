@@ -14,6 +14,12 @@ class RoutinesController < ApplicationController
     routine = Routine.create routine_params
     workout = routine.workouts.build
     @current_user.routines << routine
+    workout.sets = params[:workouts][:sets]
+    workout.reps = params[:workouts][:reps]
+    workout.exercise_id = params[:workouts][:exercise_id]
+    workout.save
+    routine.update routine_params
+    routine.workouts<<workout
     redirect_to routines_path
   end
 
@@ -31,6 +37,7 @@ class RoutinesController < ApplicationController
     workout.exercise_id = params[:workouts][:exercise_id]
     workout.save
     routine.update routine_params
+    routine.workouts<<workout
     redirect_to routine
   end
 

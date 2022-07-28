@@ -13,7 +13,7 @@
         <div class="publiclist">
             <strong> <%= workout.sets %> </strong> sets of 
             <strong> <%= workout.reps %> </strong> reps of
-            <strong> <%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong>
+            <strong> <%= link_to "#{workout.exercise.name.pluralize}", "/exercises/#{workout.exercise_id}" %> </strong>
         </div>
         <% end %>
-     <% end %>
+    <% end %>

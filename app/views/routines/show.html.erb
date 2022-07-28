@@ -1,14 +1,11 @@
 <h1><%= @routine.title %></h1>
-    <% if @check == [nil] %>
-        <br>
-        <h2>Routine is empty!</h2>
-    <% else %>
+    <% if @routine.workouts.present? %>
         <% @workouts.each do |workout| %>
             <div class="routinedisplay">
             <div class="workoutlist">
              <strong><%= workout.sets %> </strong> sets of 
              <strong><%= workout.reps %> </strong> reps of
-                <strong><%= link_to "#{workout.exercise.name}'s", "/exercises/#{workout.exercise_id}" %> </strong> 
+             <strong><%= link_to "#{workout.exercise.name.pluralize}", "/exercises/#{workout.exercise_id}" %> </strong> 
         </div>
         <div class="routinecontrols">
             <%= link_to "Edit", edit_workout_path(workout) %>
@@ -16,7 +13,7 @@
         </div>
         </div>
         <% end %>
-    <% end%>
+    <% end %>
 
 <div class="controls">
     <%= link_to "Add to Routine", edit_routine_path(@routine) %>
