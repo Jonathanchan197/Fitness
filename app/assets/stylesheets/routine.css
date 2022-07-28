@@ -200,6 +200,10 @@ div.user_image {
     margin-left: 50px;
 }
 
+div.user_image img {
+    border-radius: 3em;
+}
+
 .user_name {
     width: 350px;
     height: 100px;
