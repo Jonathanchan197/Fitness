@@ -39,6 +39,8 @@ I first planned out the CRUD systems I would use and generated an ERD diagram to
 ![Homepage(Logged-In](/app/assets/images/LoggedIn.png)
 ![All Routines](/app/assets/images/Myroutines.png)
 ![Routine List](/app/assets/images/Routinelist.png)
+![Create Routine](/app/assets/images/Createroutine.png)
+![Exercise List](/app/assets/images/Exerciselist.png)
 ![Admin Users](/app/assets/images/Allusers.png)
 
 ### Acknowledgements
