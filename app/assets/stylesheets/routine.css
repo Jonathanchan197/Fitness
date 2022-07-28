@@ -196,12 +196,14 @@ iframe, .muscle {
 /* User page */
 div.user_image {
     width: 100px;
+    height: 100px;
     display: inline-block;
     margin-left: 50px;
 }
 
 div.user_image img {
-    border-radius: 3em;
+    border-radius: 50%;
+    height: 100%;
 }
 
 .user_name {
