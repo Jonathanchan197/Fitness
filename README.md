@@ -12,13 +12,6 @@
     - Delete and edit any page
 - Icon indicator to show User rank
 
-## Screenshots
-![Homepage](/app/assets/images/Homepage.png)
-![Homepage(Logged-In](/app/assets/images/LoggedIn.png)
-![All Routines](/app/assets/images/Myroutines.png)
-![Routine List](/app/assets/images/Routinelist.png)
-![Admin Users](/app/assets/images/Allusers.png)
-
 ## Models
 I first planned out the CRUD systems I would use and generated an ERD diagram to see the association models needed
 
@@ -34,6 +27,18 @@ I first planned out the CRUD systems I would use and generated an ERD diagram to
 5. Improved CSS styling
 6. Deploying a local project online via [Heroku](https://www.heroku.com/)
 7. User image-upload via [Cloudinary](https://cloudinary.com/)
+
+### To do
+- [x] Cloudinary Image Upload
+- [ ] Build second version with bootstrap
+- [ ] Email authenticate
+
+## Screenshots
+![Homepage](/app/assets/images/Homepage.png)
+![Homepage(Logged-In](/app/assets/images/LoggedIn.png)
+![All Routines](/app/assets/images/Myroutines.png)
+![Routine List](/app/assets/images/Routinelist.png)
+![Admin Users](/app/assets/images/Allusers.png)
 
 ### Acknowledgements
 Thank you Loden and Joel
