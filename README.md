@@ -7,6 +7,7 @@
 - Share and track other User Routines
 - Upload avatars to be displayed in your profile
 - Login and Register
+    - User sessions
 - Admin-only functions
     - View all users
     - Delete and edit any page
