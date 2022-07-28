@@ -1,17 +1,17 @@
 # :muscle: Workout Tracker
 [Access Here](http://jc197-workout-tracker.herokuapp.com/)
 ## Features
-- Make your Workout Routines from existing exercises or create your own
-- Create exercises with links to youtube videos
+- Make your workout routines from existing exercises or create your own
+- Create exercises with links to Youtube videos
 - See which exercises train which muscle groups, vice versa
-- Share and track other User Routines
+- Share and track other user routines
 - Upload avatars to be displayed in your profile
 - Login and Register
     - User sessions
 - Admin-only functions
     - View all users
     - Delete and edit any page
-- Icon indicator to show User rank
+- Icon indicator to show user rank
 
 ## Models
 I first planned out the CRUD systems I would use and generated an ERD diagram to see the different models and associations
@@ -20,7 +20,7 @@ I first planned out the CRUD systems I would use and generated an ERD diagram to
 
 ### What I learned
 1. Building CRUD systems
-2. Associating models (One-many, Many-many)
+2. Associating models (one-to-many, many-to-many)
 3. Ruby and Rails proficiency
 4. Nested forms
     - Checkbox based on current associations
@@ -41,6 +41,7 @@ I first planned out the CRUD systems I would use and generated an ERD diagram to
 ![Routine List](/app/assets/images/Routinelist.png)
 ![Create Routine](/app/assets/images/Createroutine.png)
 ![Exercise List](/app/assets/images/Exerciselist.png)
+![Exercise Show](/app/assets/images/Exerciseshow.png)
 ![Admin Users](/app/assets/images/Allusers.png)
 
 ### Acknowledgements
