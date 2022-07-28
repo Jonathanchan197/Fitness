@@ -1,4 +1,4 @@
-# :muscle: Fitness Project
+# :muscle: Workout Tracker
 [Access Here](http://fierce-hamlet-60761.herokuapp.com/)
 ## Features
 - Make your Workout Routines from existing exercises or create your own
