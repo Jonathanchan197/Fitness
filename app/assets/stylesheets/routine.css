@@ -175,6 +175,7 @@ div.checkbox input {
 
 .checkbox {
     margin-left: 30px;
+    width: 90%;
 }
 
 .list {
