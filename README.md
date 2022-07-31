@@ -15,6 +15,23 @@
     - Delete and edit any page
 - Icon indicator to show user rank
 
+## Table of Contents
+- [Technologies](#Technologies)
+- [Models](#Models)
+- [What I learned](#What-I-learned)
+- [Future Features](#To-do)
+- [Screenshots](#Screenshots)
+- [Acknowledgements](#Acknowledgements)
+
+## Technologies
+- Ruby v2.7.6
+- Ruby on Rails v5.2.8.1
+- CSS
+- HTML5
+- Ruby Gems
+    - Youtube-Rails
+    - bcrypt
+
 ## Models
 I first planned out the CRUD systems I would use and generated an ERD diagram to see the different models and associations
 
