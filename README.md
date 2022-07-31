@@ -31,6 +31,8 @@
 - Ruby Gems
     - Youtube-Rails
     - bcrypt
+- [Heroku](https://www.heroku.com/)
+- [Cloudinary](https://cloudinary.com/)
 
 ## Models
 I first planned out the CRUD systems I would use and generated an ERD diagram to see the different models and associations
