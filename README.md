@@ -1,7 +1,7 @@
 # :muscle: Workout Tracker
-[Try it out Here](http://jc197-workout-tracker.herokuapp.com/)
-- Admin Account: toto@ga.co chicken
-- User Account: gogo@ga.co chicken
+[Try it out here!](http://jc197-workout-tracker.herokuapp.com/)
+- Admin Account - Username: toto@ga.co Password: chicken
+- User Account -  Username: gogo@ga.co Password: chicken
 ## Features
 - Make your workout routines from existing exercises or create your own
 - Create exercises with links to Youtube videos
